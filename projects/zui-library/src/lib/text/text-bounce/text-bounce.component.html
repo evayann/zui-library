@@ -1,0 +1,13 @@
+@for (
+  character of text();
+  track character;
+  let index = $index;
+  let length = $count
+) {
+  <span
+    [attr.state]="bounceState()"
+    [ngClass]="{ space: character === ' ' }"
+    [ngStyle]="{ '--position': index, '--text-length': length }"
+    >{{ character }}</span
+  >
+}
