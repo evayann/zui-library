@@ -1,0 +1,46 @@
+/* Structural Elements */
+
+/* Base section styles */
+section {
+    @apply my-4 sm:my-6 md:my-8 lg:my-10 mx-auto;
+}
+
+/* Dynamic Grid Layout */
+section:has(> article) {
+    @apply grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))];
+}
+
+/* Article styles within grid */
+section > article {
+    @apply p-4 overflow-y-auto;
+}
+
+/* Docs styles */
+main > section {
+    @apply hidden md:block;
+}
+
+article {
+    @apply flex-1 p-2 md:p-6 mr-2 overflow-y-auto;
+}
+
+/* Horizontal Rule */
+hr {
+    @apply border-0 h-px my-4 sm:my-6 md:my-8 lg:my-10 bg-gray-200 dark:bg-gray-700;
+}
+
+/* Card Design using figure element */
+/* Card Design */
+figure {
+    @apply border border-solid border-gray-400 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-black;
+}
+
+/* Card content */
+figure > figcaption {
+    @apply px-4 py-2 sm:px-4 md:px-6 text-gray-900 dark:text-gray-100;
+}
+
+/* Card actions */
+figure > footer {
+    @apply border-none flex justify-end mt-6;
+}

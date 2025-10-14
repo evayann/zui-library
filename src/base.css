@@ -1,0 +1,36 @@
+header {
+  @apply flex flex-wrap items-center justify-between border-b border-gray-200 px-4 py-2 dark:border-gray-700;
+}
+
+body {
+  @apply mx-6 my-4 bg-white text-gray-900 sm:mx-8 sm:my-6 md:mx-24 md:my-8 lg:mx-36 lg:my-10 xl:mx-64 xl:my-10 dark:bg-black dark:text-gray-100;
+}
+
+main {
+  @apply flex md:my-4;
+}
+
+nav {
+  @apply flex flex-wrap;
+}
+
+footer {
+  @apply flex flex-col flex-wrap items-center justify-between gap-2 border-t border-gray-200 p-4 sm:flex-row sm:gap-0 dark:border-gray-700;
+}
+
+footer p {
+  @apply w-full text-center text-sm sm:w-auto sm:text-left sm:text-base;
+}
+
+pre {
+  @apply my-4 overflow-x-auto rounded-lg bg-gray-100 p-4 text-sm md:text-base dark:bg-gray-900;
+}
+
+code {
+  @apply rounded-lg bg-gray-100 px-2 py-1 font-mono text-sm md:text-base dark:bg-gray-900;
+}
+
+/* When code is inside pre, remove the individual code styling */
+pre code {
+  @apply rounded-none bg-transparent p-0 text-gray-600 dark:text-gray-400;
+}
