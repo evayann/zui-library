@@ -1,9 +1,25 @@
 @import "tailwindcss";
-@import './src/index.css';
+@import "./src/index.css";
 
-@utility list-circle {list-style-type: circle;}
-@utility list-square {list-style-type: square;}
-@utility list-alpha {list-style-type: lower-alpha;}
-@utility list-roman {list-style-type: lower-roman;}
+@utility list-circle {
+  list-style-type: circle;
+}
+@utility list-square {
+  list-style-type: square;
+}
+@utility list-alpha {
+  list-style-type: lower-alpha;
+}
+@utility list-roman {
+  list-style-type: lower-roman;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme static {
+  --color-primary: oklch(0.7568 0.1569 146);
+  --color-secondary: oklch(0.7568 0.1569 326);
+  --color-bg-dark: oklch(0.9 0.025 146);
+  --color-bg: oklch(0.95 0.025 146);
+  --color-bg-light: oklch(1 0.025 146);
+}

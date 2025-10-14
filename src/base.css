@@ -3,7 +3,8 @@ header {
 }
 
 body {
-  @apply mx-6 my-4 bg-white text-gray-900 sm:mx-8 sm:my-6 md:mx-24 md:my-8 lg:mx-36 lg:my-10 xl:mx-64 xl:my-10 dark:bg-black dark:text-gray-100;
+  /* @apply mx-6 my-4 bg-white text-gray-900 sm:mx-8 sm:my-6 md:mx-24 md:my-8 lg:mx-36 lg:my-10 xl:mx-64 xl:my-10 dark:bg-black dark:text-gray-100; */
+  @apply bg-[var(--color-bg)];
 }
 
 main {
