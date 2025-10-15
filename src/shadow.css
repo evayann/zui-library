@@ -2,31 +2,43 @@
   --tw-inset-shadow: inset 0 1px 2px #ffffff30;
   --tw-ring-shadow: 0 1px 2px #00000030;
   --tw-shadow: 0 2px 4px #00000015;
-  @apply bg-bg-light shadow;
+  @apply shadow;
 }
 
 .depth-1 {
   @apply depth-1;
 }
 
+div.depth-1 {
+  @apply depth-1 bg-bg-light;
+}
+
 @utility depth-2 {
   --tw-inset-shadow: inset 0 1px 2px #ffffff50;
   --tw-ring-shadow: 0 2px 4px #00000030;
   --tw-shadow: 0 4px 8px #00000015;
-  @apply bg-bg shadow;
+  @apply shadow;
 }
 
 .depth-2 {
   @apply depth-2;
 }
 
+div.depth-2 {
+  @apply depth-2 bg-bg;
+}
+
 @utility depth-3 {
   --tw-inset-shadow: inset 0 1px 2px #ffffff70;
   --tw-ring-shadow: 0 4px 6px #00000030;
   --tw-shadow: 0 6px 10px #00000015;
-  @apply bg-bg-dark shadow;
+  @apply shadow;
 }
 
 .depth-3 {
   @apply depth-3;
+}
+
+div.depth-3 {
+  @apply depth-3 bg-bg-dark;
 }
