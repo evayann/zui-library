@@ -1,8 +1,11 @@
 @utility depth-1 {
-  --tw-inset-shadow: inset 0 1px 2px #ffffff30;
-  --tw-ring-shadow: 0 1px 2px #00000030;
-  --tw-shadow: 0 2px 4px #00000015;
   @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 18%);
+  --tw-ring-shadow: 0 1px 2px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
 }
 
 .depth-1 {
@@ -14,10 +17,13 @@ div.depth-1 {
 }
 
 @utility depth-2 {
-  --tw-inset-shadow: inset 0 1px 2px #ffffff50;
-  --tw-ring-shadow: 0 2px 4px #00000030;
-  --tw-shadow: 0 4px 8px #00000015;
   @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 30%);
+  --tw-ring-shadow: 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 4px 8px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
 }
 
 .depth-2 {
@@ -29,10 +35,13 @@ div.depth-2 {
 }
 
 @utility depth-3 {
-  --tw-inset-shadow: inset 0 1px 2px #ffffff70;
-  --tw-ring-shadow: 0 4px 6px #00000030;
-  --tw-shadow: 0 6px 10px #00000015;
   @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 43%);
+  --tw-ring-shadow: 0 4px 6px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 6px 10px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
 }
 
 .depth-3 {

@@ -31,10 +31,10 @@
   </head>
   <body>
     <h1>zui, a shadow oriented css library</h1>
+    <p> All this css component library is done over the <a href="https://codepen.io/whosajid/pen/LEGRBzp">Sajid</a> depth principle. Big thanks to him !</p>
     <di class="flex flex-col">
       <h2>Buttons</h2>
-
-‡        <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
+       <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
           <button variant="primary">Primary</button>
           <button variant="secondary">Secondary</button>
           <button variant="cta">Call To Action</button>
@@ -63,9 +63,12 @@
       <h2>Checkbox</h2>
       <div class="depth-1 flex flex-col gap-2 rounded p-4">
         <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
-          <label><input type="checkbox" />Option 1</label>
-          <label><input disabled type="checkbox" />Option 2</label>
-          <label><input type="checkbox" />Option 3</label>
+          <label><input checked type="checkbox" variant="primary" />Primary</label>
+          <label><input checked type="checkbox" variant="secondary" />Secondary</label>
+          <label><input checked type="checkbox" variant="cta" />Cta</label>
+          <label><input checked disabled type="checkbox" variant="primary" />Primary</label>
+          <label><input checked disabled type="checkbox" variant="secondary" />Secondary</label>
+          <label><input checked disabled type="checkbox" variant="cta" />Cta</label>
         </div>
       </div>
     </di>
