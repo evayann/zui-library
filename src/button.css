@@ -20,7 +20,7 @@ button {
 }
 
 button:active:not(:disabled) {
-  @apply translate-y-0;
+  --shadow-accent-rgb: var(--color-black-rgb);
 }
 
 button:focus-visible {
@@ -59,6 +59,12 @@ button[variant~="shadow"] {
   padding: 0.375rem 0.75rem; /* Smaller padding for tertiary on mobile */
 }
 
+button[variant~="shadow"]:active {
+  box-shadow:
+    inset 0 1px 2px rgb(var(--accent-color-rgb) / 18%),
+    0 2px 4px rgb(var(--accent-color-rgb) / 35%);
+}
+
 button[variant~="border"] {
   @apply border border-(--accent-color) bg-transparent text-black;
 }
@@ -66,11 +72,6 @@ button[variant~="border"] {
 /* Button with icon */
 button svg {
   @apply mr-1 h-3.5 w-3.5; /* Smaller icons for mobile */
-}
-
-/* Full width button on smallest screens */
-button[full-mobile="true"] {
-  @apply w-full justify-center;
 }
 
 /* Responsive adjustments - Small devices (480px and up) */

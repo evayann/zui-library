@@ -7,10 +7,6 @@ body {
   @apply bg-[var(--color-bg)];
 }
 
-main {
-  @apply flex md:my-4;
-}
-
 nav {
   @apply flex flex-wrap;
 }
