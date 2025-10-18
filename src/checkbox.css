@@ -58,7 +58,7 @@ input[type="checkbox"]:not(:disabled):active {
 }
 
 input[type="checkbox"]:checked {
-  background: var(--primary-color);
+  @apply bg-(--primary-color);
 }
 
 input[type="checkbox"]:checked::before {
@@ -67,7 +67,5 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:active:not(:checked)::after {
-  box-shadow: none;
-  transition: none;
-  opacity: 1;
+  @apply opacity-100 shadow-none transition-none;
 }
