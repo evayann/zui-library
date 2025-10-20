@@ -8,98 +8,80 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       body {
-        margin: 0 1vw;
+        --color-primary: oklch(62.805% 0.12739 21.331);
+        --color-primary-rgb: 202 102 102;
+        --text-primary: white;
+
+        --color-secondary: oklch(67.923% 0.13228 286.849);
+        --color-secondary-rgb: 147 138 229;
+        --text-secondary: white;
+
+        --color-cta: oklch(95.041% 0.19355 111.473);
+        --color-cta-rgb: 244 250 62;
+        --text-cta: black;
+
+        --color-bg-dark: oklch(0.9 0.025 146);
+        --color-bg: oklch(0.95 0.025 146);
+        --color-bg-light: oklch(1 0.025 146);
+
+        --color-black-rgb: 0 0 0;
+        --color-white-rgb: 255 255 255;
+
+        @apply flex h-[100dvh] w-[100dvw] flex-col;
       }
 
-      body > * {
-        @apply pb-5;
-      }
-
-      .column {
-        @apply flex justify-center gap-5;
-        margin: 0 5vw;
-      }
-
-      .center {
-        @apply flex items-center justify-center;
-      }
-
-      .square {
-        @apply h-30 w-30;
+      .banner {
+        @apply absolute inset-0 -z-10;
+        background-position: center;
+        background-size: cover;
+        filter: grayscale(0.8) brightness(1.25);
+        background-image: url("https://wp-bruleursdeloups-website.s3.eu-west-3.amazonaws.com/2025/07/bdl-CHL2025-bandeau-site-vf.jpg");
       }
     </style>
   </head>
   <body>
-    <h1>zui, a shadow oriented css library</h1>
-    <main>
-      <p> All this css component library is done over the <a href="https://codepen.io/whosajid/pen/LEGRBzp">Sajid</a> depth principle. Big thanks to him !</p>
-      <p>Each section will present a component with is three variants: primary, secondary and cta</p>
-    </main>
-    <div class="flex flex-col">
-      <h2>Buttons</h2>
-       <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
-          <button variant="primary">Primary</button>
-          <button variant="secondary">Secondary</button>
-          <button variant="cta">Call To Action</button>
-          <button variant="primary shadow">Primary shadow</button>
-          <button variant="secondary shadow">Secondary shadow</button>
-          <button variant="cta shadow">Cta shadow</button>
-          <button variant="primary border">Primary border</button>
-          <button variant="secondary border">Secondary border</button>
-          <button variant="cta border">Cta border</button>
-        </div>
-
-        <h3>Disabled state</h3>
-        <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
-          <button disabled variant="primary">Primary</button>
-          <button disabled variant="secondary">Secondary</button>
-          <button disabled variant="cta">Call To Action</button>
-          <button disabled variant="primary shadow">Primary shadow</button>
-          <button disabled variant="secondary shadow">Secondary shadow</button>
-          <button disabled variant="cta shadow">Cta shadow</button>
-          <button disabled variant="primary border">Primary border</button>
-          <button disabled variant="secondary border">Secondary border</button>
-          <button disabled variant="cta border">Cta border</button>
-        </div>
+    <nav class="flex justify-end">
+      <ul class="depth-3 bg-bg-dark flex w-full gap-2 p-3">
+        <li class="me-auto">
+          <button variant="primary shadow">Menu</button>
+        </li>
+        <li><button variant="primary border">Photos</button></li>
+        <li><button variant="primary border">Entreprise</button></li>
+        <li><button variant="cta">Billeterie</button></li>
+      </ul>
+    </nav>
+    <div class="banner"></div>
+    <div class="m-5 grid h-0 grow grid-cols-4 grid-rows-4 gap-5">
+      <div
+        class="-depth-2 col-span-2 col-start-1 row-span-2 row-start-3 rounded"
+      >
+        <h1>Matches</h1>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
 
-      <h2>Checkbox</h2>
-      <div class="depth-1 flex flex-col gap-2 rounded p-4">
-        <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
-          <label><input checked type="checkbox" variant="primary" />Primary</label>
-          <label><input checked type="checkbox" variant="secondary" />Secondary</label>
-          <label><input checked type="checkbox" variant="cta" />Cta</label>
-          <label><input checked disabled type="checkbox" variant="primary" />Primary</label>
-          <label><input checked disabled type="checkbox" variant="secondary" />Secondary</label>
-          <label><input checked disabled type="checkbox" variant="cta" />Cta</label>
-        </div>
-      </div>
-
-      <h2>Radio</h2>
-      <div class="depth-1 flex flex-col gap-2 rounded p-4">
-        <div class="mx-[5vw] grid grid-flow-row grid-cols-3 gap-3">
-          <label><input type="radio" variant="primary" name="radioGroup" />Primary</label>
-          <label><input type="radio" variant="secondary" name="radioGroup" />Secondary</label>
-          <label><input type="radio" variant="cta" name="radioGroup" />Cta</label>
-          <label><input disabled type="radio" variant="primary" name="radioGroupDisabled" />Primary</label>
-          <label><input disabled type="radio" variant="secondary" checked name="radioGroupDisabled"/>Secondary</label>
-          <label><input disabled type="radio" variant="cta" name="radioGroupDisabled"/>Cta</label>
-        </div>
-      </div>
-    </div>
-    <div class="depth-1 flex flex-col gap-2 rounded p-4">
-      <h2>
-        Depth by <a href="https://codepen.io/whosajid/pen/LEGRBzp">Sajid</a>
-      </h2>
-      <div class="column">
-        <div class="square center depth-1 rounded">
-          <p>Depth 1</p>
-        </div>
-        <div class="square center depth-2 rounded">
-          <p>Depth 2</p>
-        </div>
-        <div class="square center depth-3 rounded">
-          <p>Depth 3</p>
+      <div class="depth-1 col-span-2 col-start-3 flex flex-col rounded">
+        <h1>Actualité</h1>
+        <div class="flex grow gap-3 overflow-x-auto p-5">
+          <div class="depth-2 p-2">
+            <h2>La CHL !</h2>
+            <p>Ca y est il l'on fait !</p>
+            <button variant="secondary shadow" class="mt-auto">
+              Plus d'infos
+            </button>
+          </div>
+          <div class="depth-2 p-2">
+            <p>Par contre en magnus ...</p>
+            <p>Ca y est il l'on fait !</p>
+            <button variant="secondary shadow">Plus d'infos</button>
+          </div>
+          <div class="depth-2 p-2">
+            <p>Par contre en magnus ...</p>
+            <p>Ca y est il l'on fait !</p>
+            <button variant="secondary shadow">Plus d'infos</button>
+          </div>
         </div>
       </div>
     </div>

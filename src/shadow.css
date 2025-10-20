@@ -1,3 +1,61 @@
+@utility -depth-3 {
+  @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 43%);
+  --tw-ring-shadow: 0 4px 6px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 6px 10px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 18%);
+}
+
+.-depth-3 {
+  @apply -depth-3 bg-bg-dark;
+}
+
+@utility -depth-2 {
+  @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 30%);
+  --tw-ring-shadow: 0 4px 6px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 6px 10px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 0%);
+}
+
+.-depth-2 {
+  @apply -depth-2 bg-bg;
+}
+
+@utility -depth-1 {
+  @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-ring-shadow: 0 4px 6px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-shadow: 0 6px 10px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 9%);
+}
+
+.-depth-1 {
+  @apply -depth-1 bg-bg-light;
+}
+
+@utility depth-0 {
+  @apply shadow;
+  --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 18%);
+  --tw-ring-shadow: 0 1px 2px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+  --tw-ring-offset-shadow: 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
+  --tw-shadow: inset 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
+}
+
+.depth-0 {
+  @apply depth-0;
+}
+
 @utility depth-1 {
   @apply shadow;
   --tw-inset-shadow: inset 0 1px 2px

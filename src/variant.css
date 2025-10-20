@@ -1,0 +1,17 @@
+:is(input, button, select)[variant~="primary"] {
+  --variant-text-color: var(--text-primary);
+  --variant-color: var(--color-primary);
+  --variant-color-rgb: var(--color-primary-rgb);
+}
+
+:is(input, button, select)[variant~="secondary"] {
+  --variant-text-color: var(--text-secondary);
+  --variant-color: var(--color-secondary);
+  --variant-color-rgb: var(--color-secondary-rgb);
+}
+
+:is(input, button, select)[variant~="cta"] {
+  --variant-text-color: var(--text-cta);
+  --variant-color: var(--color-cta);
+  --variant-color-rgb: var(--color-cta-rgb);
+}

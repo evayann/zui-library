@@ -1,23 +1,5 @@
 @reference "./shadow.css";
 
-input[type="radio"][variant~="primary"] {
-  --tick-color: var(--text-primary);
-  --primary-color: var(--color-primary);
-  --primary-color-rgb: var(--color-primary-rgb);
-}
-
-input[type="radio"][variant~="secondary"] {
-  --tick-color: var(--text-secondary);
-  --primary-color: var(--color-secondary);
-  --primary-color-rgb: var(--color-secondary-rgb);
-}
-
-input[type="radio"][variant~="cta"] {
-  --tick-color: var(--text-cta);
-  --primary-color: var(--color-cta);
-  --primary-color-rgb: var(--color-cta-rgb);
-}
-
 input[type="radio"] {
   --radio-diameter: --spacing(5);
   width: var(--radio-diameter);
@@ -36,7 +18,7 @@ label:has(> input[type="radio"]:disabled) {
 
 input[type="radio"]::after {
   @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
-  box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color);
 }
 
 input[type="radio"]:not(:disabled):hover {
@@ -44,11 +26,11 @@ input[type="radio"]:not(:disabled):hover {
 }
 
 input[type="radio"]:not(:disabled):active {
-  --shadow-color-rgb: var(--primary-color-rgb);
+  --shadow-color-rgb: var(--variant-color-rgb);
 }
 
 input[type="radio"]:checked {
-  @apply border-4 border-transparent bg-(--primary-color);
+  @apply border-4 border-transparent bg-(--variant-color);
 }
 
 input[type="radio"]:active:not(:checked)::after {

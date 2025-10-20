@@ -1,24 +1,6 @@
 /* Reference: https://uiverse.io/Galahhad/sweet-ape-100 */
 @reference "./shadow.css";
 
-input[type="checkbox"][variant~="primary"] {
-  --tick-color: var(--text-primary);
-  --primary-color: var(--color-primary);
-  --primary-color-rgb: var(--color-primary-rgb);
-}
-
-input[type="checkbox"][variant~="secondary"] {
-  --tick-color: var(--text-secondary);
-  --primary-color: var(--color-secondary);
-  --primary-color-rgb: var(--color-secondary-rgb);
-}
-
-input[type="checkbox"][variant~="cta"] {
-  --tick-color: var(--text-cta);
-  --primary-color: var(--color-cta);
-  --primary-color-rgb: var(--color-cta-rgb);
-}
-
 input[type="checkbox"] {
   --checkbox-diameter: --spacing(5);
   width: var(--checkbox-diameter);
@@ -37,11 +19,11 @@ label:has(> input[type="checkbox"]:disabled) {
 
 input[type="checkbox"]::after {
   @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
-  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 1.75) var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 1.75) var(--variant-color);
 }
 
 input[type="checkbox"]::before {
-  border-color: var(--tick-color);
+  border-color: var(--variant-text-color);
   @apply absolute start-[50%] top-[40%] h-[7px] w-[4px] border-r-2 border-b-2 opacity-0 content-[''];
   transform: translate(-50%, -50%) rotate(45deg) scale(0);
   transition:
@@ -54,11 +36,11 @@ input[type="checkbox"]:not(:disabled):hover {
 }
 
 input[type="checkbox"]:not(:disabled):active {
-  --shadow-color-rgb: var(--primary-color-rgb);
+  --shadow-color-rgb: var(--variant-color-rgb);
 }
 
 input[type="checkbox"]:checked {
-  @apply bg-(--primary-color);
+  @apply bg-(--variant-color);
 }
 
 input[type="checkbox"]:checked::before {

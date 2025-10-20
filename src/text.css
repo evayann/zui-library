@@ -1,0 +1,26 @@
+@reference "./shadow.css";
+
+input[type="text"] {
+  @apply depth-3 cursor-pointer appearance-none rounded px-1 py-0.5 transition-all duration-300;
+}
+
+input[type="text"]:focus-visible {
+  @apply outline-0;
+}
+
+label:has(> input[type="text"]) {
+  @apply flex cursor-pointer items-center gap-2;
+}
+
+input[type="text"]:disabled,
+label:has(> input[type="text"]:disabled) {
+  @apply cursor-not-allowed opacity-50;
+}
+
+input[type="text"]:not(:disabled):is(:hover, :focus-visible) {
+  --shadow-accent-rgb: var(--color-black-rgb);
+}
+
+input[type="text"]:not(:disabled):active {
+  --shadow-color-rgb: var(--variant-color-rgb);
+}

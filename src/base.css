@@ -7,10 +7,6 @@ body {
   @apply bg-[var(--color-bg)];
 }
 
-nav {
-  @apply flex flex-wrap;
-}
-
 footer {
   @apply flex flex-col flex-wrap items-center justify-between gap-2 border-t border-gray-200 p-4 sm:flex-row sm:gap-0 dark:border-gray-700;
 }

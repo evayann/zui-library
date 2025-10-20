@@ -1,0 +1,42 @@
+@reference "./shadow.css";
+
+select {
+  @apply depth-3 relative cursor-pointer rounded px-1 py-0.5 transition-all duration-300;
+}
+
+select:focus-visible {
+  @apply outline-0;
+}
+
+label:has(> select) {
+  @apply flex cursor-pointer items-center gap-2;
+}
+
+select:disabled,
+label:has(> select:disabled) {
+  @apply cursor-not-allowed opacity-50;
+}
+
+select:not(:disabled):is(:hover, :focus-visible) {
+  --shadow-accent-rgb: var(--color-black-rgb);
+}
+
+select:not(:disabled):active {
+  --shadow-color-rgb: var(--variant-color-rgb);
+}
+
+:is(label, .select-container) > select {
+  @apply grow appearance-none;
+}
+
+:is(label, .select-container):has(> select) {
+  @apply relative;
+}
+
+:is(label, .select-container):has(> select)::before {
+  transform: translate(0%, -50%) rotate(45deg);
+  @apply absolute end-[5%] top-[50%] aspect-square h-[7px] border-r-1 border-b-1 transition-all content-[''];
+}
+:is(label, .select-container):has(> select:hover)::before {
+  transform: rotate(225deg);
+}

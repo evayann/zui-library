@@ -1,5 +1,9 @@
 @import "./base.css";
 @import "./button.css";
 @import "./checkbox.css";
-@import "./shadow.css";
+@import "./number.css";
 @import "./radio.css";
+@import "./select.css";
+@import "./shadow.css";
+@import "./text.css";
+@import "./variant.css";
