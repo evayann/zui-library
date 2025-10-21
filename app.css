@@ -19,15 +19,18 @@
 @theme static {
   --color-primary: oklch(0.7568 0.1569 146);
   --color-primary-rgb: 102 202 113;
-  --text-primary: white;
+  --color-for-primary: white;
+  --text-primary: var(--color-for-primary);
 
   --color-secondary: oklch(0.7568 0.1569 326);
   --color-secondary-rgb: 226 138 229;
-  --text-secondary: white;
+  --text-for-secondary: white;
+  --text-secondary: var(--color-for-secondary);
 
   --color-cta: oklch(0.7568 0.1569 56);
   --color-cta-rgb: 250 146 62;
-  --text-cta: white;
+  --text-for-cta: white;
+  --text-cta: var(--color-for-cta);
 
   --color-bg-dark: oklch(0.9 0.025 146);
   --color-bg: oklch(0.95 0.025 146);

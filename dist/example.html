@@ -40,47 +40,76 @@
     </style>
   </head>
   <body>
-    <nav class="flex justify-end">
-      <ul class="depth-3 bg-bg-dark flex w-full gap-2 p-3">
-        <li class="me-auto">
-          <button variant="primary shadow">Menu</button>
-        </li>
-        <li><button variant="primary border">Photos</button></li>
-        <li><button variant="primary border">Entreprise</button></li>
-        <li><button variant="cta">Billeterie</button></li>
+    <div class="depth-3 flex p-3">
+      <h1 class="me-auto">ZUI, shadow based css component library</h1>
+      <ul class="flex gap-2.5">
+        <li><button variant="primary shadow">Docs</button></li>
       </ul>
-    </nav>
-    <div class="banner"></div>
+    </div>
     <div class="m-5 grid h-0 grow grid-cols-4 grid-rows-4 gap-5">
       <div
         class="-depth-2 col-span-2 col-start-1 row-span-2 row-start-3 rounded"
       >
-        <h1>Matches</h1>
+        <h1>Card</h1>
         <ul>
           <li></li>
           <li></li>
         </ul>
       </div>
+      <p>
+        Main objective of this lib is to provide easy styling for each basic
+        html stuff to create a webapp who can use shadow to create depth effect.
+        This can be done by work of ...
+      </p>
+      <p>
+        3 styles of input are available
+        <span class="bg-bg-dark rounded p-1 text-black"> Filled </span>,
+        <span class="border-bg-dark rounded border p-1 text-black">
+          Bordered </span
+        >, <span class="rounded p-1 text-black shadow"> Shadowed </span>. Each
+        elements have shadow to highlight them. Coloration is done by 3
+        <span class="bg-primary text-for-primary rounded p-1"> Primary</span>,
+        <span class="bg-secondary text-for-secondary rounded border p-1">
+          Secondary </span
+        >,
+        <span class="bg-cta text-for-cta rounded p-1 shadow">
+          Call to action </span
+        >.
+      </p>
 
-      <div class="depth-1 col-span-2 col-start-3 flex flex-col rounded">
-        <h1>Actualité</h1>
-        <div class="flex grow gap-3 overflow-x-auto p-5">
-          <div class="depth-2 p-2">
-            <h2>La CHL !</h2>
-            <p>Ca y est il l'on fait !</p>
-            <button variant="secondary shadow" class="mt-auto">
-              Plus d'infos
-            </button>
+      <div class="depth-1 col-span-2 col-start-3 flex flex-col rounded p-2">
+        <h1>Buttons</h1>
+        <p></p>
+        <div class="grow p-5">
+          <div class="depth-1 mb-2 w-full rounded p-1">
+            <button variant="primary">Primary</button>
+            <button variant="secondary">Secondary</button>
+            <button variant="cta">CTA</button>
+            <button variant="shadow primary">Primary</button>
+            <button variant="shadow secondary">Secondary</button>
+            <button variant="shadow cta">CTA</button>
+            <button variant="border primary">Primary</button>
+            <button variant="border secondary">Secondary</button>
+            <button variant="border cta">CTA</button>
           </div>
-          <div class="depth-2 p-2">
-            <p>Par contre en magnus ...</p>
-            <p>Ca y est il l'on fait !</p>
-            <button variant="secondary shadow">Plus d'infos</button>
-          </div>
-          <div class="depth-2 p-2">
-            <p>Par contre en magnus ...</p>
-            <p>Ca y est il l'on fait !</p>
-            <button variant="secondary shadow">Plus d'infos</button>
+          <div class="flex gap-0.5">
+            <div class="depth-2 p-2">
+              <h2>La CHL !</h2>
+              <p>Ca y est il l'on fait !</p>
+              <button variant="secondary shadow" class="mt-auto">
+                Plus d'infos
+              </button>
+            </div>
+            <div class="depth-2 p-2">
+              <p>Par contre en magnus ...</p>
+              <p>Ca y est il l'on fait !</p>
+              <button variant="secondary shadow">Plus d'infos</button>
+            </div>
+            <div class="depth-2 p-2">
+              <p>Par contre en magnus ...</p>
+              <p>Ca y est il l'on fait !</p>
+              <button variant="secondary shadow">Plus d'infos</button>
+            </div>
           </div>
         </div>
       </div>
