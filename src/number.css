@@ -1,7 +1,7 @@
 @reference "./shadow.css";
 
 input[type="number"] {
-  @apply depth-3 cursor-pointer appearance-none rounded px-1 py-0.5 transition-all duration-300;
+  @apply px-1 py-0.5;
 }
 
 input[type="number"]:focus-visible {

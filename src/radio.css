@@ -1,38 +1,42 @@
 @reference "./shadow.css";
 
-input[type="radio"] {
-  --radio-diameter: --spacing(5);
-  width: var(--radio-diameter);
-  height: var(--radio-diameter);
-  @apply depth-3 relative cursor-pointer appearance-none rounded-full transition-all duration-300;
-}
+@layer components {
+  input[type="radio"] {
+    --radio-diameter: --spacing(5);
+    max-width: var(--radio-diameter);
+    max-height: var(--radio-diameter);
+    width: var(--radio-diameter);
+    height: var(--radio-diameter);
+    @apply relative rounded-full;
+  }
 
-label:has(> input[type="radio"]) {
-  @apply flex cursor-pointer items-center gap-2;
-}
+  label:has(> input[type="radio"]) {
+    @apply flex cursor-pointer items-center gap-2;
+  }
 
-input[type="radio"]:disabled,
-label:has(> input[type="radio"]:disabled) {
-  @apply cursor-not-allowed opacity-50;
-}
+  input[type="radio"]:disabled,
+  label:has(> input[type="radio"]:disabled) {
+    @apply cursor-not-allowed opacity-50;
+  }
 
-input[type="radio"]::after {
-  @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
-  box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color);
-}
+  input[type="radio"]::after {
+    @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
+    box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color);
+  }
 
-input[type="radio"]:not(:disabled):hover {
-  --shadow-accent-rgb: var(--color-black-rgb);
-}
+  input[type="radio"]:not(:disabled):hover {
+    --shadow-accent-rgb: var(--color-black-rgb);
+  }
 
-input[type="radio"]:not(:disabled):active {
-  --shadow-color-rgb: var(--variant-color-rgb);
-}
+  input[type="radio"]:not(:disabled):active {
+    --shadow-color-rgb: var(--variant-color-rgb);
+  }
 
-input[type="radio"]:checked {
-  @apply border-4 border-transparent bg-(--variant-color);
-}
+  input[type="radio"]:checked {
+    @apply border-4 border-transparent bg-(--variant-color);
+  }
 
-input[type="radio"]:active:not(:checked)::after {
-  @apply opacity-100 shadow-none transition-none;
+  input[type="radio"]:active:not(:checked)::after {
+    @apply opacity-100 shadow-none transition-none;
+  }
 }

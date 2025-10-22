@@ -29,14 +29,6 @@
 
         @apply flex h-[100dvh] w-[100dvw] flex-col;
       }
-
-      .banner {
-        @apply absolute inset-0 -z-10;
-        background-position: center;
-        background-size: cover;
-        filter: grayscale(0.8) brightness(1.25);
-        background-image: url("https://wp-bruleursdeloups-website.s3.eu-west-3.amazonaws.com/2025/07/bdl-CHL2025-bandeau-site-vf.jpg");
-      }
     </style>
   </head>
   <body>
@@ -46,10 +38,8 @@
         <li><button variant="primary shadow">Docs</button></li>
       </ul>
     </div>
-    <div class="m-5 grid h-0 grow grid-cols-4 grid-rows-4 gap-5">
-      <div
-        class="-depth-2 col-span-2 col-start-1 row-span-2 row-start-3 rounded"
-      >
+    <div class="m-5 flex h-0 grow gap-5">
+      <div class="-depth-2 rounded">
         <h1>Card</h1>
         <ul>
           <li></li>
@@ -69,7 +59,7 @@
         >, <span class="rounded p-1 text-black shadow"> Shadowed </span>. Each
         elements have shadow to highlight them. Coloration is done by 3
         <span class="bg-primary text-for-primary rounded p-1"> Primary</span>,
-        <span class="bg-secondary text-for-secondary rounded border p-1">
+        <span class="bg-secondary text-for-secondary rounded p-1">
           Secondary </span
         >,
         <span class="bg-cta text-for-cta rounded p-1 shadow">
@@ -82,7 +72,7 @@
         <p></p>
         <div class="grow p-5">
           <div class="depth-1 mb-2 w-full rounded p-1">
-            <button variant="primary">Primary</button>
+            <button variant="primary" class="text-violet-600">Primary</button>
             <button variant="secondary">Secondary</button>
             <button variant="cta">CTA</button>
             <button variant="shadow primary">Primary</button>
