@@ -930,14 +930,9 @@ pre code {
 @layer components {
   button {
     max-width: 100%;
-    min-width: calc(var(--spacing) * 20);
-    --tw-translate-y: calc(var(--spacing) * 0);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
     cursor: pointer;
-    border-radius: var(--radius-3xl);
-    background-color: var(--variant-color);
-    padding: calc(var(--spacing) * 2);
-    color: var(--variant-text-color);
+    appearance: none;
+    border-radius: 0.25rem;
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     --tw-inset-shadow: inset 0 1px 2px
@@ -949,29 +944,33 @@ pre code {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    button:hover:not(:disabled) {
-      --tw-translate-y: calc(var(--spacing) * 0.5);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    border-radius: var(--radius-3xl);
+    background-color: var(--variant-color);
+    padding: calc(var(--spacing) * 2);
+    color: var(--variant-text-color);
   }
   button:active:not(:disabled) {
     --shadow-accent-rgb: var(--color-black-rgb);
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 30%);
+    --tw-ring-shadow: 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+    --tw-shadow: 0 4px 8px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
   }
   button:disabled {
     cursor: not-allowed;
     opacity: 50%;
   }
-  button:not([variant~="shadow"]):hover:not(:disabled) {
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    --tw-inset-shadow: inset 0 1px 2px
-    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 18%);
-    --tw-ring-shadow: 0 1px 2px
-    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
-    --tw-shadow: 0 2px 4px
-    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
+  button:hover:not(:disabled) {
+    --tw-scale-x: 105%;
+    --tw-scale-y: 105%;
+    --tw-scale-z: 105%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   button[variant~="shadow"] {
     background-color: transparent;
@@ -985,9 +984,15 @@ pre code {
   button[variant~="border"] {
     border-style: var(--tw-border-style);
     border-width: 1px;
-    border-color: var(--accent-color);
+    border-color: var(--variant-color);
     background-color: transparent;
     color: var(--color-black);
+  }
+  button:hover {
+    --shadow-accent-rgb: var(--color-black-rgb);
+  }
+  button:active {
+    --shadow-color-rgb: var(--variant-color-rgb);
   }
   button svg {
     margin-right: calc(var(--spacing) * 1);
@@ -1512,24 +1517,24 @@ input[type="text"]:not(:disabled):active {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-ease {
   syntax: "*";
@@ -1563,10 +1568,10 @@ input[type="text"]:not(:disabled):active {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-duration: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-ease: initial;
       --tw-content: "";
       --tw-outline-style: solid;

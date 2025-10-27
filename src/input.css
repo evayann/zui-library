@@ -1,6 +1,8 @@
+@reference "./state.css";
+
 @layer components {
   input,
   select {
-    @apply depth-3 cursor-pointer appearance-none rounded transition-all duration-300;
+    @apply default-state;
   }
 }

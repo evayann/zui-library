@@ -1,0 +1,11 @@
+@utility default-state {
+  @apply depth-3 cursor-pointer appearance-none rounded transition-all duration-300;
+}
+
+@utility hover-state {
+  --shadow-accent-rgb: var(--color-black-rgb);
+}
+
+@utility active-state {
+  --shadow-color-rgb: var(--variant-color-rgb);
+}
