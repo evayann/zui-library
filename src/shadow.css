@@ -89,7 +89,7 @@ div.depth-1 {
 }
 
 div.depth-2 {
-  @apply depth-2 bg-bg;
+  @apply depth-2 bg-bg-light;
 }
 
 @utility depth-3 {
@@ -107,5 +107,5 @@ div.depth-2 {
 }
 
 div.depth-3 {
-  @apply depth-3 bg-bg-dark;
+  @apply depth-3 bg-bg-light;
 }

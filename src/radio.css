@@ -20,9 +20,8 @@
   }
 
   input[type="radio"]::after {
-    @apply absolute inset-0.75 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
-    /* @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
-    box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color); */
+    @apply absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-500 ease-[cubic-bezier(0.12,0.4,0.29,1.46)] content-[''];
+    box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color);
   }
 
   input[type="radio"]:not(:disabled):hover {
@@ -34,11 +33,7 @@
   }
 
   input[type="radio"]:checked {
-    /* @apply border-4 border-transparent bg-(--variant-color); */
-  }
-
-  input[type="radio"]:checked::after {
-    @apply depth-2 bg-(--variant-color) opacity-100;
+    @apply border-4 border-transparent bg-(--variant-color);
   }
 
   input[type="radio"]:active:not(:checked)::after {

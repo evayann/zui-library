@@ -6,6 +6,13 @@
     <title>Zui Examples</title>
     <link href="./zui.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style type="text/tailwindcss">
       body {
         --color-primary: oklch(62.805% 0.12739 21.331);
@@ -38,69 +45,78 @@
         <li><button variant="primary shadow">Docs</button></li>
       </ul>
     </div>
-    <div class="m-5 flex h-0 grow gap-5">
-      <div class="-depth-2 rounded">
-        <h1>Card</h1>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <p>
-        Main objective of this lib is to provide easy styling for each basic
-        html stuff to create a webapp who can use shadow to create depth effect.
-        This can be done by work of ...
-      </p>
-      <p>
-        3 styles of input are available
-        <span class="bg-bg-dark rounded p-1 text-black"> Filled </span>,
-        <span class="border-bg-dark rounded border p-1 text-black">
-          Bordered </span
-        >, <span class="rounded p-1 text-black shadow"> Shadowed </span>. Each
-        elements have shadow to highlight them. Coloration is done by 3
-        <span class="bg-primary text-for-primary rounded p-1"> Primary</span>,
-        <span class="bg-secondary text-for-secondary rounded p-1">
-          Secondary </span
-        >,
-        <span class="bg-cta text-for-cta rounded p-1 shadow">
-          Call to action </span
-        >.
-      </p>
 
-      <div class="depth-1 col-span-2 col-start-3 flex flex-col rounded p-2">
-        <h1>Buttons</h1>
-        <p></p>
-        <div class="grow p-5">
-          <div class="depth-1 mb-2 w-full rounded p-1">
-            <button variant="primary" class="text-violet-600">Primary</button>
-            <button variant="secondary">Secondary</button>
-            <button variant="cta">CTA</button>
-            <button variant="shadow primary">Primary</button>
-            <button variant="shadow secondary">Secondary</button>
-            <button variant="shadow cta">CTA</button>
-            <button variant="border primary">Primary</button>
-            <button variant="border secondary">Secondary</button>
-            <button variant="border cta">CTA</button>
+    <div class="m-5 mx-auto flex grow gap-5">
+      <div
+        class="-depth-1 flex min-w-sm flex-col gap-5 rounded p-10 lg:min-w-xl"
+      >
+        <h1>Shipping informations</h1>
+        <div>
+          <label>
+            Address
+            <input type="text" />
+          </label>
+          <label>
+            City
+            <input type="text" />
+          </label>
+          <label>
+            Country
+            <input type="text" />
+          </label>
+        </div>
+
+        <div class="depth-0 flex gap-5 p-5">
+          <label class="-depth-3 p-5">
+            <i class="fa-solid fa-credit-card text-5xl"></i>
+            <input variant="primary" type="radio" name="payment" />
+          </label>
+          <label class="-depth-3 p-5">
+            <i class="fa-solid fa-money-bills text-5xl"></i>
+            <input variant="primary" type="radio" name="payment" />
+          </label>
+          <label class="-depth-3 p-5">
+            <i class="fa-solid fa-sack-dollar text-5xl"></i>
+            <input variant="primary" type="radio" name="payment" />
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Card number
+            <input type="text" />
+          </label>
+          <div>
+            <label>
+              Expirity date
+              <input type="text" />
+            </label>
+            <label>
+              CVV
+              <input type="text" />
+            </label>
           </div>
-          <div class="flex gap-0.5">
-            <div class="depth-2 p-2">
-              <h2>La CHL !</h2>
-              <p>Ca y est il l'on fait !</p>
-              <button variant="secondary shadow" class="mt-auto">
-                Plus d'infos
-              </button>
-            </div>
-            <div class="depth-2 p-2">
-              <p>Par contre en magnus ...</p>
-              <p>Ca y est il l'on fait !</p>
-              <button variant="secondary shadow">Plus d'infos</button>
-            </div>
-            <div class="depth-2 p-2">
-              <p>Par contre en magnus ...</p>
-              <p>Ca y est il l'on fait !</p>
-              <button variant="secondary shadow">Plus d'infos</button>
-            </div>
-          </div>
+        </div>
+
+        <div class="mt-auto flex justify-around">
+          <button>Go back</button>
+          <button variant="primary">Order</button>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <div class="depth-3 flex flex-col gap-1 p-10">
+          <h2 class="mb-1">Order summary</h2>
+          <p>Historic chart 2€</p>
+          <p>Line chart 2€</p>
+          <p>Total 4€</p>
+        </div>
+        <div class="depth-1 p-10">
+          <label>
+            Discount code
+            <input type="text" />
+          </label>
+          <button variant="border">Apply code</button>
         </div>
       </div>
     </div>
