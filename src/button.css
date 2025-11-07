@@ -19,9 +19,9 @@
     @apply cursor-not-allowed opacity-50;
   }
 
-  button:hover:not(:disabled) {
+  /* button:hover:not(:disabled) {
     @apply scale-105;
-  }
+  } */
 
   button[variant~="shadow"] {
     @apply bg-transparent text-black;

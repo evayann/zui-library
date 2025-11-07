@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.15 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -154,9 +154,7 @@
     ::placeholder {
       color: currentcolor;
       @supports (color: color-mix(in lab, red, red)) {
-        & {
-          color: color-mix(in oklab, currentcolor 50%, transparent);
-        }
+        color: color-mix(in oklab, currentcolor 50%, transparent);
       }
     }
   }
@@ -966,12 +964,6 @@ pre code {
     cursor: not-allowed;
     opacity: 50%;
   }
-  button:hover:not(:disabled) {
-    --tw-scale-x: 105%;
-    --tw-scale-y: 105%;
-    --tw-scale-z: 105%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
   button[variant~="shadow"] {
     background-color: transparent;
     color: var(--color-black);
@@ -1150,7 +1142,7 @@ input[type="number"]:not(:disabled):active {
   }
   input[type="radio"]::after {
     position: absolute;
-    inset: calc(var(--spacing) * 0);
+    inset: calc(var(--spacing) * 0.75);
     border-radius: inherit;
     opacity: 0%;
     transition-property: all;
@@ -1162,7 +1154,6 @@ input[type="number"]:not(:disabled):active {
     transition-timing-function: cubic-bezier(0.12,0.4,0.29,1.46);
     --tw-content: '';
     content: var(--tw-content);
-    box-shadow: 0 0 0 calc(var(--radio-diameter) / 1.75) var(--variant-color);
   }
   input[type="radio"]:not(:disabled):hover {
     --shadow-accent-rgb: var(--color-black-rgb);
@@ -1170,11 +1161,17 @@ input[type="number"]:not(:disabled):active {
   input[type="radio"]:not(:disabled):active {
     --shadow-color-rgb: var(--variant-color-rgb);
   }
-  input[type="radio"]:checked {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
-    border-color: transparent;
+  input[type="radio"]:checked::after {
     background-color: var(--variant-color);
+    opacity: 100%;
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-inset-shadow: inset 0 1px 2px
+    rgb(var(--shadow-accent-rgb, var(--color-white-rgb)) / 30%);
+    --tw-ring-shadow: 0 2px 4px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 18%);
+    --tw-shadow: 0 4px 8px
+    rgb(var(--shadow-color-rgb, var(--color-black-rgb)) / 9%);
   }
   input[type="radio"]:active:not(:checked)::after {
     opacity: 100%;
@@ -1521,21 +1518,6 @@ input[type="text"]:not(:disabled):active {
   syntax: "*";
   inherits: false;
 }
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -1569,9 +1551,6 @@ input[type="text"]:not(:disabled):active {
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-duration: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-ease: initial;
       --tw-content: "";
       --tw-outline-style: solid;
